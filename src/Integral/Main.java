@@ -2,6 +2,10 @@ package Integral;
 
 import java.util.Scanner;
 
+/*-----------------------------------------------------------
+ Written by Truong Lam Bao Hieu (27.01.2021)
+ ------------------------------------------------------------- */
+
 public class Main {
 
     static double pi = 3.14;
@@ -25,13 +29,8 @@ public class Main {
         String again = "";
 
         Scanner scanner = new Scanner(System.in);
-        /*-----------------------------------------------------------
-        Written by Truong Lam Bao Hieu (27.01.2021)
-        ------------------------------------------------------------- */
-
 
         Menu();
-
 
         while(!input.equalsIgnoreCase("x")){
             double a, b;
