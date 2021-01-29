@@ -6,19 +6,19 @@ import static java.lang.Math.*;
 public class Function {
     static double pi = 3.14;
 
-    public static double delta(double a, double b, double n){
+    private static double delta(double a, double b, double n){
         return (a - b)/n;
     }
 
-    public static double function1(double x){
+    private static double function1(double x){
         return ((4*x - 1)/ (sqrt(2*x+1)+2 ));
     }
 
-    public static double function2(double x){
+    private static double function2(double x){
         return sin(x - pi/4)/(sin(2*x) +2+(1+sin(x)+cos(x)));
     }
 
-    public static double function3(double x){
+    private static double function3(double x){
         return  log(x)/Math.pow(x,3);
     }
 
@@ -32,13 +32,6 @@ public class Function {
         return AreaLeft;
     }
 
-    private static double getArea(double n, double a, double b, int index, double Area, double x) {
-        switch (index) {
-            case 1 -> Area = Area + delta(a, b, n) * function1(x);
-            case 2 -> Area = Area + delta(a, b, n) * function2(x);
-            case 3 -> Area = Area + delta(a, b, n) * function3(x);
-        }
-        return Area;
     }
 
     public static double rightRiemannSum(double n, double a, double b, int index){
@@ -52,7 +45,15 @@ public class Function {
         return AreaRight;
     }
 
-    public static double Average(double LeftRiemann, double RightRiemann){
+    private static double getArea(double n, double a, double b, int index, double Area, double x) {
+        switch (index) {
+            case 1 -> Area = Area + delta(a, b, n) * function1(x);
+            case 2 -> Area = Area + delta(a, b, n) * function2(x);
+            case 3 -> Area = Area + delta(a, b, n) * function3(x);
+        }
+        return Area;
+
+    private static double Average(double LeftRiemann, double RightRiemann){
         return (LeftRiemann+RightRiemann)/2;
     }
 
