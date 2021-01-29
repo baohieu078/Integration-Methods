@@ -7,9 +7,7 @@ import java.util.Scanner;
  ------------------------------------------------------------- */
 
 public class Main {
-
-    static double pi = 3.14;
-
+ 
     public static void Menu(){
         System.out.println("-------------------------------------------");
         System.out.println("Calculate the integral of f(x)dx");
@@ -21,7 +19,6 @@ public class Main {
     }
 
     public static void main(String[] args) throws Exception{
-
 
         int indx;
         int n = 1000;
